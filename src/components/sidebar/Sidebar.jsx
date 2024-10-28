@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./sidebar.css";
 
 const Sidebar = () => {
+  const [toggle, showMenu] = useState(false);
   return (
-    <aside className='aside'>
+   <>
+    <aside className={toggle ? "aside show_menu" : "aside"}>
       <a href="#home" className="nav_logo">
         FLOURISH<span className='red'>.</span>
       </a>
@@ -54,6 +56,11 @@ const Sidebar = () => {
         <span className="copyright">&Flourish; 2024 - 2025.</span>
       </div>
     </aside>
+
+    <div className={toggle ? "nav_toggle nav_toggle-open" : "nav_toggle"} onClick={ () => showMenu (!toggle)}> 
+      <i className="icon-menu"></i>
+    </div>
+   </>
   )
 }
 

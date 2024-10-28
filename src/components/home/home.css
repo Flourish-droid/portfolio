@@ -87,6 +87,12 @@
     animation: ani-mouse 2s linear infinite;
 }
 
+@media screen and (max-width: 1024px) {
+    .home_social-link{
+        font-size: 1.125rem;
+    }
+}
+
 /* .shapes{
     position: absolute;
     left: 0;
